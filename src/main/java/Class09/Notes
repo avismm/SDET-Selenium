@@ -1,0 +1,23 @@
+Action Class in selenium
+
+Allows operations such as
+drag and drop
+right click
+double click
+hover
+simple click
+etc
+
+jsExecutor
+js executor is used to execute java script code
+syntax
+Declare the instance of the js executor : javascriptExecutor js = (javascriptExecutor) driver
+js.executeScript(script of java script)
+
+Screenshots:
+Steps
+1) Declare instance of the screenshot
+2) Take the screenshot and save it: screenshot=ts.getScreenshotAs(OUTPUTTYPE.file)
+3) Store the screenshot on your computer
+FileUtils.copyFile(filename,path where you want to save te file)
+
