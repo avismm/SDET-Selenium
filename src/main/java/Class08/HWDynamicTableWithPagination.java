@@ -13,7 +13,7 @@ public class HWDynamicTableWithPagination extends CommonMethods {
         String browser="chrome";
         openBrowserAndLaunchApplication(url,browser);
 
-//finding the 4th elements within the table rows and storing them in a list of remarks Elements
+//finding the elements in the 4th column within the table rows and storing them in a list of remarks Elements
 
         do{
             List<WebElement> remarksElements=driver.findElements(By.xpath("//table[@class='table table-hover']/tbody/tr/td[7]"));

@@ -1,5 +1,9 @@
-Action Class in selenium
+KEYS
+Steps and Syntax:
+Locate the web element
+webElement.sendKeys(Keys.ENTER/TAB/ESC);
 
+Action Class in selenium:
 Allows operations such as
 drag and drop
 right click
@@ -7,12 +11,19 @@ double click
 hover
 simple click
 etc
+Steps:
+1) Declare instance of the Action Class
+2) Use the object to call the available methods
+Note: When you ever chain different methods, user the .build method at the end before performing the
+action to execute the chained up methods. This helps to avoid errors in some scenarios.
+
 
 jsExecutor
-js executor is used to execute java script code
+js executor is used to execute java script code. It is a simpler and effective way to
+perform some actions in the web browser or on some web elements
 syntax
 Declare the instance of the js executor : javascriptExecutor js = (javascriptExecutor) driver
-js.executeScript(script of java script)
+js.executeScript(JS to be executed, element), e.g., js.executeScript("arguments[0].click();", element);
 
 Screenshots:
 Steps
@@ -20,4 +31,7 @@ Steps
 2) Take the screenshot and save it: screenshot=ts.getScreenshotAs(OUTPUTTYPE.file)
 3) Store the screenshot on your computer
 FileUtils.copyFile(filename,path where you want to save te file)
+
+File path => system.getProperty(usr.dir)+"\\screenshot\\"+filename+"file extension".
+e.g., FileUtils.copyFile(ss,new File(System.getProperty("user.dir")+"\\screenshot\\"+filename+".png"));
 
